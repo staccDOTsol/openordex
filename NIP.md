@@ -3,7 +3,7 @@
 ## Inscription Order
 `draft` `optional` `ordinals` `psbt` `orderbook` `author:orenyomtov`
 
-An inscription order is a `kind 802` event that is used to publish a signed order to buy or sell a specific ordinal inscription.
+An inscription order is a `kind 844` event that is used to publish a signed order to buy or sell a specific ordinal inscription.
 
 # Event Content
 
@@ -32,7 +32,7 @@ Below is an example code snippet that creates an inscription order event:
 ```js
 function createOrderEvent(pubkey, networkName, orderType, inscriptionId, inscriptionUtxo, priceInSats, exchangeName, signedSalePsbt) {
   const event = {
-    kind: 802,
+    kind: 844,
     pubkey: pubkey,
     created_at: Math.floor(Date.now() / 1000),
     tags: [
